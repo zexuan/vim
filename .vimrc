@@ -37,14 +37,21 @@ call vundle#rc()
 " required!
 Bundle 'project.tar.gz'
 Bundle 'bufexplorer.zip'
-"Bundle 'Valloric/YouCompleteMe'
 Bundle 'SuperTab'
 Bundle 'neocomplcache'
 Bundle 'fugitive.vim'
-"Bundle 'vundle'
-"Bundle 'Shougo/vimproc'
-"Bundle 'Shougo/unite.vim'
-"Bundle 'm2mdas/phpcomplete-extended'
+"Bundle 'STL-improved'
+Bundle 'Indent-Guides'
+"Bundle 'a.vim'
+Bundle 'The-NERD-Commenter'
+Bundle 'taglist.vim'
+"Bundle 'DrawIt'
+"Bundle 'UltiSnips'
+"Bundle 'Powerline'
+"Bundle 'indexer.tar.gz'
+"Bundle 'DfrankUtil'
+"Bundle 'vimprj'
+"Bundle 'YouCompleteMe'
 let g:SuperTabDefaultCompletionType = "<c-x><c-o>"
 filetype plugin indent on    " required!
 
@@ -52,7 +59,6 @@ filetype plugin indent on    " required!
 syntax on
 
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
-
 
 " for cscope
 if has("cscope")
@@ -156,4 +162,12 @@ if has("cscope")
 
 endif
 
-
+let Tlist_Ctags_Cmd='ctags'
+"不同时显示多个文件的tag，只显示当前文件的
+let Tlist_Show_One_File=1               
+"设置taglist的宽度
+let Tlist_WinWidt =28
+"如果taglist窗口是最后一个窗口，则退出vim
+let Tlist_Exit_OnlyWindow=1             
+"在右侧窗口中显示taglist窗口
+let Tlist_Use_Right_Window=1
